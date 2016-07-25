@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require customs/index_dashboard
+//= require bootstraps/bootstrap.min
+//= require material-design/material.min
+//= require material-design/ripples.min
+
+$.material.init();

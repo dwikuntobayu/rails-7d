@@ -10,5 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require customs/index_dashboard
+ *= require bootstraps/bootstrap.min
+ *= require material-design/bootstrap-material-design
+ *= require material-design/ripples
  */

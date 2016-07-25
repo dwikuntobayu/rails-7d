@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-  root 'dashboards#index'
+  resources :articles
+  root 'articles#index'
   
   get 'dashboards' => 'dashboards#index'
   get 'dashboards/profile' => 'dashboards#profile'
