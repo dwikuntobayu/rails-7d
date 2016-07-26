@@ -1,0 +1,20 @@
+<%= form_for @product do |f| %>
+
+<%= f.label :nama %>
+<%= f.text_field :nama %>
+<%= @product.errors[:nama].first unless @product.errors[:nama].blank? %>
+<br/>
+
+<%= f.label :quantity %>
+<%= f.text_field :quantity %>
+<%= @product.errors[:quantity].first unless @product.errors[:quantity].blank? %>
+<br/>
+
+<%= f.label :price %>
+<%= f.text_field :price %>
+<br/>
+
+<%= f.submit :submit %>
+<br />
+
+<% end %>

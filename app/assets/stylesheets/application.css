@@ -13,4 +13,9 @@
  *= require bootstraps/bootstrap.min
  *= require material-design/bootstrap-material-design
  *= require material-design/ripples
+ *= require materialize/materialize.min
  */
+body {
+  background-color: #FFFFFF;
+  padding-top:60px;
+}

@@ -15,5 +15,8 @@
 //= require bootstraps/bootstrap.min
 //= require material-design/material.min
 //= require material-design/ripples.min
+//= require materialize/materialize.min
 
-$.material.init();
+$(function() {
+  $.material.init();
+});

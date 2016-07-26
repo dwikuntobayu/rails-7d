@@ -1,1 +1,90 @@
-<h2>Halaman Profile</h2>
+<div class="row">
+  <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+    <a href="javascript:void()" >Edit Profile</a>&nbsp; | &nbsp;    <a href="javascript:void()" >Logout</a>
+    <br>
+    <p class=" text-info">
+      <%= Time.new.strftime("%d-%m-%Y %H:%M %z") %>
+    </p>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h3 class="panel-title">M Dwikuntobayu</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-3 col-lg-3 " align="center">
+            <img alt="User Pic" src="data:image/jpeg;base64,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" class="img-circle img-responsive">
+          </div>
+
+          <div class="col-xs-10 col-sm-10 hidden-md hidden-lg">
+            <br>
+            <dl>
+              <dt>
+                DEPARTMENT:
+              </dt>
+              <dd>
+                Administrator
+              </dd>
+              <dt>
+                HIRE DATE
+              </dt>
+              <dd>
+                11/12/2013
+              </dd>
+              <dt>
+                DATE OF BIRTH
+              </dt>
+              <dd>
+                11/12/2013
+              </dd>
+              <dt>
+                GENDER
+              </dt>
+              <dd>
+                Male
+              </dd>
+            </dl>
+          </div>
+          <div class=" col-md-9 col-lg-9 ">
+            <table class="table table-user-information">
+              <tbody>
+                <tr>
+                  <td>Department:</td>
+                  <td>Development</td>
+                </tr>
+                <tr>
+                  <td>Date of Birth</td>
+                  <td>10 Oktober 1989</td>
+                </tr>
+                <tr>
+                <tr>
+                  <td>Gender</td>
+                  <td>Male</td>
+                </tr>
+                <tr>
+                  <td>Home Address</td>
+                  <td>Jl. Sukabumi dalam No.42/123, Bandung, Indonesia</td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td>dwikunto@geeksfarm.com</td>
+                </tr>
+                <td>Phone Number</td>
+                <td>089655022547</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="pull-right">
+        <a href="mailto:dwikunto@geeksfarm.com" data-toggle="tooltip" type="button" class="btn btn-raised btn-warning">
+          <i class="material-icons">email</i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>

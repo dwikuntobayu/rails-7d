@@ -1,0 +1,27 @@
+<%= link_to "Create Product", new_product_path %>
+<h3>List Products</h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+    <tr>
+      <td><%= product.nama %></td>
+      <td><%= product.quantity %></td>
+      <td><%= product.price %></td>
+      <td>
+        <%= link_to "Show", product_path(product.id) %> &nbsp; | &nbsp;
+        <%= link_to "Edit", edit_product_path(product.id) %> &nbsp; | &nbsp;
+        <%= link_to "Delete", product_path(product.id), method: "DELETE", data: {confirm: 'Delete this product ? '} %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

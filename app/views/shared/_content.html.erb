@@ -1,18 +1,9 @@
 <!-- Bagian Content -->
-<div class="container clearfix">
-  <div class="row row-offcanvas row-offcanvas-left ">
-    <!--Bagian Kiri-->
-    <div class="col-xs-12 col-sm-3 side pull-left sidebar-offcanvas" id="sidebar" role="navigation">
-      <div class="list-group">
-        <h1> HTML CSS JS with bootstrap </h1>
-      </div>
-    </div>
-
-    <!--Bagian Kanan-->
-    <div id="main-content" class="col-xs-12 col-sm-9 main pull-right">
-      <div class="panel-body">
-        <%= yield %>
-      </div>
+<div class="row row-offcanvas row-offcanvas-left ">
+  <!--Bagian Kanan-->
+  <div id="main-content" class="col-xs-12 col-sm-12 main pull-right">
+    <div class="panel-body">
+      <%= yield %>
     </div>
   </div>
 </div>

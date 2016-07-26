@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
   resources :articles
+  
+  resources :products
+  
   root 'articles#index'
   
   get 'dashboards' => 'dashboards#index'
