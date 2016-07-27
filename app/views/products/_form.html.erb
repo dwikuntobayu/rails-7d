@@ -1,7 +1,7 @@
-<%= form_for @product do |f| %>
+<%= form_for @product, multipart: true do |f| %>
 
 <%= f.label :nama %>
-<%= f.text_field :nama %>
+<%= f.text_field :nama %> 
 <%= @product.errors[:nama].first unless @product.errors[:nama].blank? %>
 <br/>
 
@@ -13,6 +13,10 @@
 <%= f.label :price %>
 <%= f.text_field :price %>
 <br/>
+
+<%= f.label :photo %>
+<%= f.file_field :photo %>
+<br />
 
 <%= f.submit :submit %>
 <br />

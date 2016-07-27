@@ -20,6 +20,11 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @article = Article.new
+    respond_to do |format|
+      format.html {}
+      format.js {}
+    end
   end
 
   def edit
@@ -40,7 +45,7 @@ class ProductsController < ApplicationController
 
   private
     def params_product
-      params.require(:product).permit(:nama, :quantity, :price)
+      params.require(:product).permit(:nama, :quantity, :price, :photo)
     end
     
     def select_product
