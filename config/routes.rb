@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  
+  resources :weapons
   resources :articles
-  
   resources :products
   
   root 'articles#index'
@@ -9,6 +8,14 @@ Rails.application.routes.draw do
   get 'dashboards' => 'dashboards#index'
   get 'dashboards/profile' => 'dashboards#profile'
   get 'dashboards/contact' => 'dashboards#contact'
+
+  get 'registrasi' => 'users#new'
+  resources :users, only: [:create, :edit, :update]
+  # post 'registrasi' => 'user#create'
+  get 'login' => 'sessions#login'
+  get 'logout' => 'sessions#logout'
+  resources :sessions
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

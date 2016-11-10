@@ -3,6 +3,10 @@
   <!--Bagian Kanan-->
   <div id="main-content" class="col-xs-12 col-sm-12 main pull-right">
     <div class="panel-body">
+      
+      <%= flash[:notice] unless flash[:notice].blank? %>
+      <%= flash[:error] unless flash[:error].blank? %>
+      
       <%= yield %>
     </div>
   </div>

@@ -1,0 +1,6 @@
+<%= render @products %>
+<tr>
+  <td colspan="6">
+    <%= paginate @products, remote: true %>
+  </td>
+</tr>

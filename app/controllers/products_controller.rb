@@ -1,9 +1,18 @@
 class ProductsController < ApplicationController
-
+  before_action :check_current_user, only: [:new, :create, :edit, :update, :destroy]
   before_action :select_product, only: [:show, :edit, :update, :destroy]
 
+
   def index
-    @products = Product.all
+    @products = Product.page(params[:page]).per(2)
+    respond_to do |format|
+      format.html {}
+      format.js {
+        @products = Product.where("nama like ? or price like ?", "%#{params[:search]}%", "%#{params[:search]}%")
+          .order("#{params[:column]} #{params[:direction]}")
+          .page(params[:page]).per(2)
+      }
+    end
   end
 
   def new

@@ -1,32 +1,24 @@
 <%= link_to "Create Product", new_product_path %>
 <h3>List Products</h3>
 
+<p>
+  Search <input type="text" id="search" placeholder="Search by nama or price" />
+</p>
+<input id="direction" type="checkbox" value="true" style="display:none" />
 <table class="table table-hover">
   <thead>
     <tr>
       <th>ID</th>
-      <th>Nama</th>
+      <th id="nama">Nama</th>
       <th>Quantity</th>
-      <th>Price</th>
+      <th id="price">Price</th>
       <th>Photo</th>
       <th>Action</th>
     </tr>
   </thead>
-  <tbody>
-    <% @products.each do |product| %>
-    <tr>
-      <td><%= product.id %></td>
-      <td><%= product.nama %></td>
-      <td><%= product.quantity %></td>
-      <td><%= product.price %></td>
-      <td><%= link_to(image_tag(product.photo.preview.url), product_path(product.id), remote: true) %></td>
-      <td>
-        <%= link_to "Show", product_path(product.id) %> &nbsp; | &nbsp;
-        <%= link_to "Edit", edit_product_path(product.id) %> &nbsp; | &nbsp;
-        <%= link_to "Delete", product_path(product.id), method: "DELETE", data: {confirm: 'Delete this product ? '} %>
-      </td>
-    </tr>
-    <% end %>
+  <tbody id="content-products">
+    <%= render "list_products"%>
   </tbody>
 </table>
 <div class="ancor-dialog"></div>
+<%= javascript_include_tag 'customs/index_products' %>
